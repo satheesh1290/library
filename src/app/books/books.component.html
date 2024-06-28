@@ -1,0 +1,27 @@
+<div class="container">
+  <h4>Books</h4>
+  <table class="table table-bordered m-3 text-center">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(book of books; track book.id){
+      <tr>
+        <td>{{ book.id }}</td>
+        <td>{{ book.title }}</td>
+        <td>
+          <button class="btn btn-danger m-3" (click)="deleteBook(book.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+      }
+    </tbody>
+  </table>
+  <div class="d-flex">
+    <button class="btn btn-primary m-3" (click)="addBook()">Add Book</button>
+  </div>
+</div>
