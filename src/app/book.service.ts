@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class BookService {
   private apiUrl =
-    'https://static-server-0vfd.onrender.com/' || 'http://localhost:3000'; // Adjust URL as per your server
+    'https://static-server-0vfd.onrender.com' || 'http://localhost:3000'; // Adjust URL as per your server
 
   constructor(private http: HttpClient) {}
 
